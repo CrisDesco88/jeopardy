@@ -1,0 +1,130 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+h2 {
+    font-size: 5rem;
+    text-align: center;
+    text-shadow: 3px 3px 6px rgb(115, 223, 37);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 100vh;
+}
+
+.board * {
+    border: 0.1rem solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    text-align: center;
+} 
+
+.my-category-title {
+    background-color: lightblue;
+    grid-row-start: 1;
+}
+
+/*POKEDEX*/
+
+.my-pokedex {
+    padding: 0.5rem;
+}
+
+.a-pokemon {
+    margin: 0.3rem;
+    display: grid;
+    grid-template-columns: repeat(12, calc(100% / 12));
+}
+
+.a-pokemon * {
+    border: 0.1rem solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.3rem;
+}
+
+.a-pokemon-id {
+    background-color: lightblue;
+    grid-column: span 2;
+    font-size: 1.3rem;
+}
+
+.a-pokemon-name {
+    grid-column: span 5;
+    background-color: lightyellow;
+    font-size: 1.3rem;
+}
+
+.a-pokemon-type {
+    grid-column: span 5;
+    font-size: 1.3rem;
+}
+
+.a-pokemon-stat {
+    background-color: lightpink;
+    grid-column: span 3;
+}
+
+.a-pokemon-alt-name {
+    background-color: lightseagreen;
+    grid-column: span 4;
+    font-size: 1.3rem;
+}
+
+/* LIBRARY */
+
+.my-library {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, calc(100% / 3));
+}
+
+.my-book {
+    display: grid;
+    grid-template-columns: 1rem 8rem;
+    grid-template-areas: 
+        "spine cover"
+        "footer footer";
+}
+
+.my-book div {
+    border: 0.1rem solid black;
+}
+
+.my-book-cover {
+    grid-area: cover;
+    height: 7rem;
+    background-color: lightgreen;
+    text-align: center;
+    padding: 1rem;
+}
+
+.my-book-spine {
+    grid-area: spine;
+    background-color: #4A4238;
+    border-top-left-radius: 0.3rem;
+}
+
+.my-book-footer {
+    grid-area: footer;
+    padding: 0.2rem;
+    background-color: lightgray;
+    border-bottom-left-radius: 0.3rem;
+}
+
+.my-book:nth-of-type(even) .my-book-cover {
+    background-color: lightblue;  
+}
+
+.my-book:nth-of-type(even) .my-book-spine {
+    background-color: #E1B07E;  
+}
